@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:id="@+id/imageView4"
+        android:layout_marginTop="145dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#4e8975"
+        android:textSize="25sp"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="20dp"
+
+
+        android:textStyle="bold"
+        android:id="@+id/textView14"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/imageView7"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="#ffffff"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/radioGroup">
+
+    </RadioGroup>
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Status   "
+        android:textColor="#737e7c"
+        android:textSize="25sp"
+
+        android:id="@+id/textView31"
+
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textView14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Subject "
+        android:id="@+id/textView32"
+        android:textSize="25sp"
+
+        android:layout_alignTop="@+id/textView14"
+        android:layout_toEndOf="@+id/textView14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:hint="Cust Name"
+
+        android:textColor="#4e8975"
+        android:textSize="22sp"
+        android:id="@+id/textView33"
+        android:layout_alignTop="@+id/textView14"
+        android:layout_toStartOf="@+id/button3" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="TICKET  nm"
+        android:textColor="#4e8975"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView35"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_alignStart="@+id/textView14" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/button"
+        android:id="@+id/button3"
+        android:onClick="sendStatus"
+        android:layout_alignTop="@+id/textView35"
+        android:layout_alignEnd="@+id/imageView7" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView31"
+        android:layout_alignStart="@+id/textView33"
+        android:id="@+id/radioGroup2">
+        <RadioButton android:id="@+id/status_pending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pending"
+            android:textColor="#737e7c"
+            android:textSize="15sp"
+
+            android:layout_alignTop="@+id/textView31"
+            android:layout_alignStart="@+id/textView33" />
+
+        <RadioButton android:id="@+id/status_onhold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On hold"
+            android:textColor="#737e7c"
+            android:textSize="15sp"
+
+            android:layout_below="@+id/status_pending"
+            android:layout_alignStart="@+id/status_pending" />
+
+        <RadioButton android:id="@+id/status_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#737e7c"
+            android:textSize="15sp"
+
+            android:text="Completed"
+            android:layout_below="@+id/status_onhold"
+            android:layout_alignStart="@+id/status_onhold" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:hint="remark"
+        android:id="@+id/editText3"
+        android:layout_gravity="right|bottom"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/radioGroup2"
+        android:layout_alignEnd="@+id/imageView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Remark !"
+        android:textSize="25sp"
+        android:id="@+id/textView30"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_toEndOf="@+id/textView14" />
+
+
+</RelativeLayout>
